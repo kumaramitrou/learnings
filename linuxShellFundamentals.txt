@@ -1,0 +1,2 @@
+### Red Hat Enterprise Linux Shell Fundamentals
+### Reference: https://app.pluralsight.com/player?course=red-hat-enterprise-linux-shell-fundamentals&author=nigel-poulton&name=red-hat-enterprise-linux-shell-fundamentals-m1&clip=0&mode=live
