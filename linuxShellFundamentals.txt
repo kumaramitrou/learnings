@@ -1,2 +1,123 @@
 ### Red Hat Enterprise Linux Shell Fundamentals
 ### Reference: https://app.pluralsight.com/player?course=red-hat-enterprise-linux-shell-fundamentals&author=nigel-poulton&name=red-hat-enterprise-linux-shell-fundamentals-m1&clip=0&mode=live
+
+BASH : Bourne Again Shell.
+
+Sections covered
+* Streams
+* Redirection
+* Everything is a File
+* Environment
+* Commands
+* Piping
+* Aliases
+* Backgrounding Jobs
+
+Shell: 
+-> Kernel is linux 
+-> Kernel is the code which interacts with h/w directly
+-> Shell is outer layer of kernel, wrapped around kernel.
+-> Shell is outer layer that acts as an interface to kernel level services
+
+cmd			description
+-----------------------
+uname -a : information about system
+top : how many processor it is using
+
+Different type of Shell
+Current Shell:
+cmd 		description
+-----------------------
+whoami	:	returns name of current logged in user
+ps 		:	process status, to know the current shell
+ping 8.8.8.8 > /tmp/pingtemp &	: ping to given ip and save the result in /tmp/pingtemp directory and run it as background process (&)
+kill 7053	: kills the process with PID 7053
+ps -p $$	:
+echo $0		: returns the current shell which runs echo command
+
+z Shell:
+yum install zsh -y 		: to install z shell
+which zsh		: check the path of binary for zshell
+zsh 			: to switch your shell to z shell
+exit 			: to exit shell.
+
+
+Linux Process Theory:
+																	wait
+								 ,> bash(process id 1)--------------------------------------------------------->bash(process id 1)----->
+								/																				  ^
+							   /																				  |	
+bash(process id 1)---> fork() /																					  |				
+							  \																					  |
+							   \																				  |					
+								\																				  |
+								 `> copy of bash(process id 2)----->exec()---->zsh(process id 2)---------------->exit()
+					 
+parent process : process id 1
+child process  : process id 2
+
+fork()	:	creates a clone of parent process
+exec()	:	converts the child process from clone of parent to its own running program and it loads binary of zshell
+
+cmd 							description
+-------------------------------------------
+ps -ef | egrep 'bash|zsh'	:	shows relationship between copy of bash, exec() and zsh
+pstree						:	shows tree structure of processes
+
+Login Shell:
+it is a shell when we first login to a system.
+
+cmd								description
+-------------------------------------------
+cat /etc/passwd | grep username : shows info of user
+ls -lh /bin/ | grep bash		: shows permission for users
+file /bin/bash					: 
+more /etc/passwd				: shows info of all users
+su -							: switch user
+
+Virtual Consoles:
+cmd								description
+-------------------------------------------
+tty								: which virtual console we are currently in
+whoami							: who else is logged in to same virtual console
+Alt+F2							: to get new console
+Alt+F3							: to get tty3
+
+we can use upto F7 to create 7 individual consoles
+
+
+Standard Streams :
+3 types: Standard Input, Standard Output, Standard Error
+these are handled as files
+Standard Input is file descriptor 0
+Standard Output is file descriptor 1
+Standard Error is file descriptor 2
+
+echo 'message'
+> : redirect operator
+echo 'message' > /tmp/alertfile	: make alertfile as standard output or command redirected to file
+CAUTION	: if the file already exist and has data in it then that data is going to destroy or stdin and stdout is going to "Clobber" the file.
+set -o noclobber	: sets file to noclobber setting
+echo 'message'>| /tmp/lsout 	:	to override noclobber(>|)
+echo 'message' >> /tmp/alertfile	: to append in file(>>)
+
+Device Files and Redirection :
+Device attached to our linux system is shown as files.
+
+The Shell Environment:
+echo $BASH_VERSION
+echo $HOSTNAME
+echo $SHELL
+type env
+
+Shell Variables : 
+are also known as local variable
+export variable to sub shell by "export varname"
+
+
+
+
+
+N.B:-
+* BASH comes under GPL V3 general public license.
+* Prevent account from logging in: you can deny access for some user by editing /etc/passwd and adding /sbin/nologin for that user.
