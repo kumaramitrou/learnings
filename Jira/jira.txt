@@ -1,0 +1,93 @@
+Jira
+----
+Jira:- Browser based Status tracking tool for projects.
+-> Great for distributed teams
+-> Full of features
+
+Products of Jira
+1. Jira Core:- basic project tracking, shared by all jira products
+2. Jira Software:- Specialized features for agile software development
+3. Jira Service Desk:- Features for Help desks.
+
+Jira Installation: Installed on-premises or hosted in Jira Cloud Hosted by attlassian.
+
+Key Concepts:-
+Issue, Issue Type, Status, Fields, 
+
+All issues created in jira belongs to a project, if you delete a project you are deleting everything in that project.
+Project has Workflows.
+Project has Boards (where you interact with project status)
+Dashboard only shows information and read only.
+
+Jira Issue Grouping Concepts
+
+Epic:- Large feature that will take many small feature or stories to complete it, can have multiple issues from different projects.
+Label:- you can tag any issues with labels, an issue can have multiple labels.
+Components:- Part of a single project or subset.
+Version: Version numbers for the product released.
+
+above 4 belongs to an issue.
+
+User Concepts
+User is assigned to 1 or more user groups, groups can be customized
+Users have roles in jira
+
+
+Carved Rock Projects in Jira:-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

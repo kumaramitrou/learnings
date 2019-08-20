@@ -1,0 +1,2 @@
+https://www.apress.com/it/book/9781430267676
+https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/prediction/c338fc98-bf91-4bda-b437-b52074e36e2f/classify/iterations/Iteration2/image

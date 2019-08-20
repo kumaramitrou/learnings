@@ -1,0 +1,12 @@
+﻿@ Host key verification failed?
+A it mean you should use ssh-keygen to let your Pi know all other hosts on which you allow login. 
+	Here is solution how to fix „Host key verification failed” Raspberry Pi SSH login problem. 
+	Simply run this command in terminal from Pi you are using to login to given host
+	
+	"ssh-keygen -R 192.168.0.201"
+	
+@ "cd: Python-3.6.0/: Permission denied", Permission denied to enter a folder?
+A sudo chmod 755 <folderName> (e.g-  sudo chmod 755 Python-3.6.0)
+
+@ error while executing espeak to translate text to speech?
+A command is "espeak "message here" --stdout | aplay -D 'default'"

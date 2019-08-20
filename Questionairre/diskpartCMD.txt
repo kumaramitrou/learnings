@@ -1,0 +1,11 @@
+Remove Partition from USB or SD
+-------------------------------
+diskpart
+list disk
+select disk 1
+detail disk
+clean
+create partition primary
+active
+formate fs=ntfs quick
+exit
