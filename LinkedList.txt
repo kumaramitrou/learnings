@@ -1,0 +1,20 @@
+Linked List
+-----------
+- Linear Data Structure, each element(node) is a separate object.
+- Dynamic Data Structure, number of nodes are not fixed, can grow or shrink based on demand.
+
+Advantages:
+> Can be Extended or reduced to fit the data set.
+> easy to maintain new insertions and deletions.
+> Efficient Memory Utilization (i.e. no need to pre-allocate memory)
+> Faster access time, can be expanded in constant time without memory overhead.
+> stack, queue can be easily implemented
+
+Disadvantages:
+> It doesnot allow direct access to the indivitual elements, you have to start at the head and follow
+  the references until you get to that item.
+> Linked list uses more memory compare with an array.
+
+Types of Linked Lists:
+- Singly Linked List
+- Doubly Linked List

@@ -1,0 +1,48 @@
+LINQ
+------------
+-> Language Integrated Query.
+-> Provides a way to query any type of data source.
+
+N.B -> Query : An expression that retrieves data from a data source,
+				Expressed in a specialized query language.
+				
+-> offers a consistent model for working with data across various kinds of data sources and formats.
+-> In LINQ query, you are always working with objects. follows same basic coding patterns to query and transform data in different formats.
+-> siplifies the working model with its generic architecture to support many kinds of data sources.
+-> LINQ providers converts the LINQ queries into the format that the underlying data source can understand.
+-> provider converts Linq query to query (e.g. Transact SQL) that can be understood by the server(e.g. SQL server database).
+-> Query expression consists of three clauses:
+	* FROM (Data Source)
+	* WHERE (Filter)
+	* SELECT (Type of Returned Elements)
+	e.g. from listEmployees in context.tblEmployees
+					where listEmployees.Salary > 70000
+						select listEmployees;
+						
+-> LINQ query operations has 3 distinct actions:
+	* Obtain the data source.(e.g. string[] arr = {"Mumbai", "Delhi"})
+	* Create the query. (e.g. var selectedResult = from cityList in arr select cityList)
+	* Execute the query. (e.g. foreach(var result in selectedResult)
+									Console.Write(result))
+									
+-> 2 types of Query execution
+	- Deferred Execution
+		* Query variable only stores the query commands, actual execution of the query is deferred until
+			you iterate over the query variable in a foreach statement.
+	- Immediate Execution
+		* Queries that perform aggregatino functions over a range of source elements must first
+			iterate over those elements, e.g. Count, Max, Average and First. These execute without an explicit foreach statement
+			because query itself uses foreach in order to return a result.
+		* To force immediate execution of any query and cache its results, call ToList or ToArray methods.
+		
+	
+Advantages: 
+- Can be used for querying multiple data sources e.g. relational and XML data.
+- Is extensible so new types of data sources can be made queryable.
+- Is composable and it can be used to solve complex problems into a series of short, comprehensible queries.
+- easy to understand and maintain.
+
+Disadvantages:
+- not a precompiled statement like stored procedures.
+- frequent changes must be recompiled and have a deployment overhead for entire code.
+- db queries are converted from SQL to application side, joins are very slow that are very specific to LINQ to SQL.

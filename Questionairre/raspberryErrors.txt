@@ -10,3 +10,6 @@ A sudo chmod 755 <folderName> (e.g-  sudo chmod 755 Python-3.6.0)
 
 @ error while executing espeak to translate text to speech?
 A command is "espeak "message here" --stdout | aplay -D 'default'"
+
+@ copy files from raspberry to local machine?
+A scp pi@10.168.80.180:~/filename.py ./filename.py

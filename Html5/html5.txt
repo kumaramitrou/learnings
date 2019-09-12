@@ -1,0 +1,165 @@
+HTML5
+------------------
+HTML
+
+* Introduction to Basic HTML Chapter 1
+-> HTML Introduction
+-> Your First HTML Web page
+-> Tables & Lists
+-> Forms & Input
+
+* HTML Chapter 2
+-> CSS Presentation
+-> Prepping With Divs & Spans
+-> In depth CSS
+-> Putting Our Site Together
+
+* Chapter 3
+-> Introduction to HTML5
+-> New Tags & Elements
+-> New Form Elements
+
+* Chapter 4
+-> Canvas, Lines and Shapes
+-> Feature Detect and Drag and Drop
+-> HTML Media Features
+-> SVG
+
+* Chapter 5
+-> Geolocation
+-> Web Storage
+-> Application Cache
+-> HTML5 and Mobile Phones
+
+Chapter 1: Intro to HTML
+- Language of the Browser
+- Not a programming language
+- wwwc creates the standards of html
+- HTML uses Tag elements, content is wrapped in an open and closing tag
+- Html document layout
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title>
+				Page Title
+			</title>
+		</head>
+		<body>
+			<p>Hello World!</p>
+		</body>
+	</html>
+	
+- Block Elements
+	* Creates a large block of content
+	* New Lines before and after element
+	* Consumes the whole width available
+	e.g: <p>
+	
+- Inline Elements
+	* No new lines
+	* Can be placed aside other elements
+	* Cannot define width
+	e.g: <a>
+	
+- Element Attributes
+	* Name-Value Pair separated with "="
+	* provides additional info.
+	* specified in start tag.
+	e.g: href
+	
+- Common Attributes
+	* style(styling), Id & class(identification of an element), title(adds extra info about the element, and tooltip)
+
+- Singleton Tags
+	* tags with no closing tag also called void elements
+	* used with attibute only tags
+	e.g: img, hr, br
+	
+- Separate and Style your HTML
+	* use <div> or <span> tag to single out blocks of html to apply style to.
+	* you can style your html with the "style" attribute or by using CSS.(CSS is prefered)
+	
+- Style Attribute selectors
+	syntax: <p style="selector:value;">text</p>
+	
+- Tables
+	syntax:
+	<table>
+		<thead>
+			<tr><td>content</td></tr>
+		</thead>
+		<tfoot>
+			<tr><td>content</td></tr>
+		</tfoot>
+		<tbody>
+			<tr><td>content</td></tr>
+		</tbody>
+	</table>
+	
+- Lists
+	syntax:
+	<ul>
+		<li></li>
+	</ul>
+	<od>
+		<li></li>
+	</od>
+	
+- HTML Forms
+	* Common attributes are action(page or script used to process the form on the server side) and method(how the form gets processed)
+	
+- Input Tag
+	* specifies an input field where a user can enter data.
+	* common attributes type, name, size, max.
+	
+- textarea Tag
+	* used for large block of text
+	* common attributes are name, rows, cols, maxlength.
+	
+- select Tag
+	* used for dropdowns (single and multiple select)
+	* common attributes are name, multiple, size.
+	
+- label Tag
+	* used to associate a fields heading with the input field
+	* common attributes are for
+	
+- fieldset Tag
+	* used to group together certain fields.
+	* common attributes are name, form, disabled.
+	
+-> Chapter 2
+- CSS
+	* stylesheet language
+	* specifications are maintained by wwwc
+	* separates the formatting and design from the markup or content of the document
+	* id uses # and class uses . and * for wildcard selector
+	* syntax:
+		<link rel="stylesheet" href="path/to/file.css" type="text/css">
+		must be placed in the <head> tag
+		
+- div and span elements
+	* used for generic organizational or stylistic applications
+	* no specific meaning
+	* div is block-level
+	* span is inline-level
+	* attributes : id and class
+	
+- N.B: padding: 1px 2px 3px 4px (top 1 px, right 2 px, bottom 3 px, left 4 px) = padding:1px 2px(top and bottom 1 px, left and right 2px)
+	
+	
+HTML5
+-----
+
+- New Standard
+- New set of Tags e.g. <header> and <section>
+- <canvas> element for 2d drawing
+- Local Storage
+- New form controls like calendar, date and time
+- Geolocation
+- Added different New Input types.
+
+HTML5 Features
+--------------
+- canvas tag (stroke is outline)
