@@ -163,3 +163,52 @@ HTML5
 HTML5 Features
 --------------
 - canvas tag (stroke is outline)
+
+HTML5 Feature Detection and Drag and Drop
+-----------------------------------------
+- Modernizr 3rd party js libraries for drag and drop.
+
+HTML5 Media
+-----------
+
+SVG in HTML5
+------------
+* Scalable Vector Graphics.
+- used to define vector-based graphics on a web page
+- Graphics are defined in XML(Extensive Markup Language)
+- Vector graphics do not lose any quality if zoomed in or resized
+- Elements can be animated
+
+Syntax: <svg xmlns="http://www.w3.org/2000/svg">
+			//Content Here
+		</svg>
+		
+Geolocation
+-----------
+- HTML5 API that allows us to get location of user
+- In javascript we use coords.longitude and coords.latitude to get the exact location.
+
+Web Storage
+-----------
+- Enables us to store data on a users local computer.
+- No More Cookies
+- How Web Storage differs from Cookies
+	> More secure
+	> Faster
+	> Stores a larger amount of data
+	> The stored data is not sent with every server request. It only is included when asked for.
+		This gives a big advantage over cookies.
+- 2 Types
+	a) localStorage() - stores data with no expiration date.
+	b) sessionStorage() - stores data for one session.
+- Storing a Value:
+	localStorage.setItem("key", "value")
+	localStorage["key"] = "value";
+- Getting a Value:
+	localStorage.getItem("key");
+	localStorage["key"]
+- Remove a Value:
+	removeItem("key");
+- Remove All Values:
+	localStorage.clear();
+	
